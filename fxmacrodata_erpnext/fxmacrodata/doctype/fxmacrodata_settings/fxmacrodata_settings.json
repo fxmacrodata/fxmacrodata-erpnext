@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "creation": "2026-10-01 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "api_key",
+  "cache_minutes",
+  "sync_section",
+  "currency_pairs"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "description": "Fetch exchange rates from FXMacroData before ERPNext's own provider. If FXMacroData has no rate for a pair, ERPNext's usual lookup runs.",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "depends_on": "enabled",
+   "description": "Sent in the X-API-Key header. Get a key at https://fxmacrodata.com/subscribe",
+   "fieldname": "api_key",
+   "fieldtype": "Password",
+   "label": "API Key",
+   "mandatory_depends_on": "enabled"
+  },
+  {
+   "default": "60",
+   "depends_on": "enabled",
+   "description": "How long a fetched rate (or a miss) is reused before asking the API again. 0 disables caching.",
+   "fieldname": "cache_minutes",
+   "fieldtype": "Int",
+   "label": "Cache Minutes",
+   "non_negative": 1
+  },
+  {
+   "depends_on": "enabled",
+   "description": "Pairs listed here get a Currency Exchange record every six hours, so reports and server-side lookups use FXMacroData rates too.",
+   "fieldname": "sync_section",
+   "fieldtype": "Section Break",
+   "label": "Scheduled Sync"
+  },
+  {
+   "fieldname": "currency_pairs",
+   "fieldtype": "Table",
+   "label": "Currency Pairs",
+   "options": "FXMacroData Currency Pair"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-10-01 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "FXMacroData",
+ "name": "FXMacroData Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
