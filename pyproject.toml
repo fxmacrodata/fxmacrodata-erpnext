@@ -13,7 +13,7 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://fxmacrodata.com/?utm_source=github&utm_medium=referral&utm_campaign=fxmacrodata-erpnext&utm_content=homepage"
+Homepage = "https://fxmacrodata.com/?utm_source=pypi&utm_medium=referral&utm_campaign=fxmacrodata-erpnext&utm_content=homepage"
 Repository = "https://github.com/fxmacrodata/fxmacrodata-erpnext"
 "Bug Reports" = "https://github.com/fxmacrodata/fxmacrodata-erpnext/issues"
 
