@@ -20,7 +20,7 @@
   },
   {
    "depends_on": "enabled",
-   "description": "Sent in the X-API-Key header. Get a key at https://fxmacrodata.com/subscribe",
+   "description": "Sent in the X-API-Key header. Get a key at https://fxmacrodata.com/subscribe?utm_source=erpnext&utm_medium=integration&utm_campaign=fxmacrodata-erpnext&utm_content=subscribe",
    "fieldname": "api_key",
    "fieldtype": "Password",
    "label": "API Key",
@@ -52,7 +52,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2026-10-01 10:00:00.000000",
+ "modified": "2026-10-05 10:00:00.000000",
  "modified_by": "Administrator",
  "module": "FXMacroData",
  "name": "FXMacroData Settings",
